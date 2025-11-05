@@ -1,11 +1,11 @@
 # Cheat-Sheet-for-Solutions-Architects-OCI-1Z0-1072-25
-This Repository has enough information for you passing the OCI Solution Architect 1z0-1072-25 exam at ease. 
-Key Topics of 1Z0-1072-25.
-Things you MUST study before going to the exam like a Last-Minute Study Sheet.
-Quick Exam OCI-1Z0-1072-25 Recall
-Exam OCI-1Z0-1072-25 Strategy Tip
+This Repository has enough information for you passing the OCI Solution Architect 1z0-1072-25 exam at ease. <br />
+Key Topics of 1Z0-1072-25.<br />
+Things you MUST study before going to the exam like a Last-Minute Study Sheet.<br />
+Quick Exam OCI-1Z0-1072-25 Recall<br />
+Exam OCI-1Z0-1072-25 Strategy Tip <br />
 
-Key Topics of 1Z0-1072-25
+Key Topics of 1Z0-1072-25<br />
 •	IAM & Policies: Use compartments, groups, policies. Policies grant access (no explicit deny). Principle of least privilege. Resources belong to one compartment; policies need to reference correct compartment. Resource movement affects effective policies.
 •	Networking: VCN, subnets, route tables, security lists, NSGs. Gateways (Internet, NAT, Service, Local/Remote Peering). Steering policies (Geolocation, ASN, IP‐prefix, Proximity) for DNS traffic. DRG, peering, connectivity (VPN, FastConnect). Network Visualiser/NPA tools for topology/analysis.
 •	Compute: VM shapes, bare metal, dedicated hosts, capacity types (on-demand, preemptible, dedicated). Instance configurations, instance pools. Shielded instances for firmware/boot security.
