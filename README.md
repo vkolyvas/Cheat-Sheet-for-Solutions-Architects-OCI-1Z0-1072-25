@@ -73,33 +73,33 @@ Things you MUST study before going to the exam like a Last-Minute Study Sheet<br
 Compartment Access Control: Policies at the root don’t automatically grant access to nested compartments.<br />
 Admin Roles: Simplify access control by reducing complex IAM policy creation.<br />
 Resource Movement Impact: Moving a resource to another compartment removes prior access unless new policies cover it.<br />
-Least Privilege Principle: Always grant only the minimum permissions necessary.
-NetworkAdmins Policy: Use full compartment path (A:B:C) when defining tenancy-level policies.
-Invalid Policy Syntax: You can’t assign tenancy-wide visibility to “any-user.”
-Tag-Based Access Control: IAM condition tags let you dynamically grant access based on group attributes.
-Instance Principals: No need for tokens; instances authenticate via dynamic groups and IAM policies.
-Auth Tokens: Use auth tokens when third-party APIs can’t use OCI’s signature method.
-Policy Optimization: Eliminate redundant child-compartment policies; inherit from parent.
+Least Privilege Principle: Always grant only the minimum permissions necessary.<br />
+NetworkAdmins Policy: Use full compartment path (A:B:C) when defining tenancy-level policies.<br />
+Invalid Policy Syntax: You can’t assign tenancy-wide visibility to “any-user.”<br />
+Tag-Based Access Control: IAM condition tags let you dynamically grant access based on group attributes.<br />
+Instance Principals: No need for tokens; instances authenticate via dynamic groups and IAM policies.<br />
+Auth Tokens: Use auth tokens when third-party APIs can’t use OCI’s signature method.<br />
+Policy Optimization: Eliminate redundant child-compartment policies; inherit from parent.<br />
 ________________________________________
-🌐 Networking
-DNS Steering: Geolocation steering routes users based on location.
-Site-to-Site VPN: Provides redundant tunnels and supports BGP or static routing.
-Invalid Block Volume Action: Block volumes can’t attach across availability domains.
-Service Gateway: Enables secure, private access to Object Storage without public internet.
-Network Path Analyzer: Detects misconfigurations causing connectivity issues.
-Remote Peering Setup: Requires DRG + RPC per VCN with non-overlapping CIDRs.
-Hybrid Redundancy: Use FastConnect with VPN or dual FastConnect for resilience.
-Private CIDRs: Use only RFC-1918 ranges (10.x, 172.16-31.x, 192.168.x).
-Private IPs: One primary private IP per VNIC; can attach a public IP in public subnets.
-SSH Connectivity Issues: Check NSG or security list ingress for port 22.
-Network Visualizer: Displays VCN topology across tenancy for easy management.
-Outbound Data Costs: OCI egress pricing is far lower than competitors.
-Capture Filters: Use flow log and packet capture filters for monitoring.
+🌐 Networking<br />
+DNS Steering: Geolocation steering routes users based on location.<br />
+Site-to-Site VPN: Provides redundant tunnels and supports BGP or static routing.<br />
+Invalid Block Volume Action: Block volumes can’t attach across availability domains.<br />
+Service Gateway: Enables secure, private access to Object Storage without public internet.<br />
+Network Path Analyzer: Detects misconfigurations causing connectivity issues.<br />
+Remote Peering Setup: Requires DRG + RPC per VCN with non-overlapping CIDRs.<br />
+Hybrid Redundancy: Use FastConnect with VPN or dual FastConnect for resilience.<br />
+Private CIDRs: Use only RFC-1918 ranges (10.x, 172.16-31.x, 192.168.x).<br />
+Private IPs: One primary private IP per VNIC; can attach a public IP in public subnets.<br />
+SSH Connectivity Issues: Check NSG or security list ingress for port 22.<br />
+Network Visualizer: Displays VCN topology across tenancy for easy management.<br />
+Outbound Data Costs: OCI egress pricing is far lower than competitors.<br />
+Capture Filters: Use flow log and packet capture filters for monitoring.<br />
 ________________________________________
-💻 Compute
-Dedicated Hosts: Use for isolated hardware and node-based licensing compliance.
-Shielded Instances: Protect from firmware and rootkit attacks with secure boot.
-Instance Configurations: Delete only if not part of a pool; reusable across pools.
+💻 Compute<br />
+Dedicated Hosts: Use for isolated hardware and node-based licensing compliance.<br />
+Shielded Instances: Protect from firmware and rootkit attacks with secure boot.<br />
+Instance Configurations: Delete only if not part of a pool; reusable across pools.<br />
 Performance Autotune: Detached block volumes auto-adjust to lowest cost tier.
 Burstable Instances: Cheaper compute for low-usage workloads with burst credits.
 Preemptible Instances: Ideal for short-term, cost-sensitive workloads.
