@@ -6,68 +6,73 @@ Quick Exam OCI-1Z0-1072-25 Recall<br />
 Exam OCI-1Z0-1072-25 Strategy Tip <br />
 
 Key Topics of 1Z0-1072-25<br />
-•	IAM & Policies: Use compartments, groups, policies. Policies grant access (no explicit deny). Principle of least privilege. Resources belong to one compartment; policies need to reference correct compartment. Resource movement affects effective policies.
-•	Networking: VCN, subnets, route tables, security lists, NSGs. Gateways (Internet, NAT, Service, Local/Remote Peering). Steering policies (Geolocation, ASN, IP‐prefix, Proximity) for DNS traffic. DRG, peering, connectivity (VPN, FastConnect). Network Visualiser/NPA tools for topology/analysis.
-•	Compute: VM shapes, bare metal, dedicated hosts, capacity types (on-demand, preemptible, dedicated). Instance configurations, instance pools. Shielded instances for firmware/boot security.
-•	Storage: Block volumes (performance tiers, backups, clone/expand/restore), Object Storage (tiers: Standard, Infrequent, Archive; retention rules; pre-authenticated requests), File Storage (mount targets, exports, snapshots, metered bytes), and service gateways for secure access between compute and services.
-•	Other Key Topics: Databases (managed DB, Autonomous DB), Architecting best practices (regions, ADs, FDs, compartments, isolation), Terminology (region, availability domain, compartment, tenancy), Security (Vault, encryption at rest/in-use, Confidential Computing), Tools & Automation (Terraform, Resource Manager, OS Management Hub for patching).
+•	IAM & Policies: Use compartments, groups, policies. Policies grant access (no explicit deny). Principle of least privilege. Resources belong to one compartment; policies need to reference correct compartment. Resource movement affects effective policies.<br />
+•	Networking: VCN, subnets, route tables, security lists, NSGs. Gateways (Internet, NAT, Service, Local/Remote Peering). Steering policies (Geolocation, ASN, IP‐prefix, Proximity) for DNS traffic. DRG, peering, connectivity (VPN, FastConnect). Network Visualiser/NPA tools for topology/analysis.<br />
+•	Compute: VM shapes, bare metal, dedicated hosts, capacity types (on-demand, preemptible, dedicated). Instance configurations, instance pools. Shielded instances for firmware/boot security.<br />
+•	Storage: Block volumes (performance tiers, backups, clone/expand/restore), Object Storage (tiers: Standard, Infrequent, Archive; retention rules; pre-authenticated requests), File Storage (mount targets, exports, snapshots, metered bytes), and service gateways for secure access between compute and services.<br />
+•	Other Key Topics: Databases (managed DB, Autonomous DB), Architecting best practices (regions, ADs, FDs, compartments, isolation), Terminology (region, availability domain, compartment, tenancy), Security (Vault, encryption at rest/in-use, Confidential Computing), Tools & Automation (Terraform, Resource Manager, OS Management Hub for patching).<br />
 ________________________________________
 
-Cheat Sheet for Solutions Architects – OCI 1Z0-1072-25
-IAM / Access
-•	Tenancy = root compartment; compartments can be nested up to 6 levels. 
-•	Policy syntax: Allow <subject> to <verb> <resource-type> in <location> [where <conditions>].
-•	Verbs: inspect, read, use, manage.
-•	Principle of least privilege → grant only required permissions.
-•	Resources have exactly one compartment at a time; moving a resource to new compartment means new compartment’s policies apply immediately.
-•	Administrator roles (for identity domains) can simplify user access by reducing custom policy count.
-•	Tag‐based access control: use where target.resource.compartment.tag.<key> = '<value>'.
-Networking
-•	VCN: your private network in OCI. Subnets live in VCNs.
-•	Gateways:
-  Internet Gateway for internet traffic.
-  NAT Gateway for outbound internet from private subnets.
-  Service Gateway for private access to OCI public services without internet.
-•	Peering and DRG: VCNs in same/different regions can connect via local or remote peering using DRG.
-•	Traffic Management Steering policies: Geolocation Steering = route based on user’s geographic location.
-•	Security Lists apply at subnet level; NSGs apply at VNIC level.
-•	Use Network Visualiser for topology view; use Network Path Analyzer for connectivity issues.
-Compute
-•	Choose shape based on workload (standard, denseIO, GPU, flexible).
-•	Capacity types: on‐demand, preemptible (interruptible), dedicated host (single-tenant, for node licensing).
-•	Instance pools + instance configurations: reuse template to scale.
-•	Shielded instances provide enhanced firmware/boot security.
-•	Use OS Management Hub for patching and update management across instances.
-Storage
-•	Block Volume: persistent block storage, can expand, backup, clone. Cannot attach across availability domains.
-•	Object Storage:
-  Tiers: Standard (frequent access), Infrequent Access (less frequent), Archive (lowest cost, retrieval delay).
-  Retention rules prevent deletion/modification until duration expires.
-  Pre-authenticated requests allow sharing objects securely.
-•	File Storage: NFS‐style file system, mount targets. MeteredBytes = data + snapshots + overhead.
-•	Use service gateways to allow compute in private subnet to access Object Storage without internet exposure.
-Architecting Best Practices
-•	Multi-region or multi-AD deployment for high availability & fault tolerance.
-•	Use compartments to isolate projects, teams, environments (Dev, Test, Prod).
-•	Set quotas and tag defaults at compartments for governance.
-•	Secure by design: least privilege, encryption in transit and at rest, use vaults for keys.
-•	Automate with Terraform/Resource Manager; enable monitoring/alerts; consider cost optimization (e.g., smaller shapes, preemptible, proper tiering).
-•	For connectivity: use redundant circuits, diverse on-prem terminations, backup VPN/FC.
-Terminology Quick Reference
-•	Region: geographic area (e.g., us-ashburn-1)
-•	Availability Domain (AD): isolated data-center within region
-•	Fault Domain (FD): group of hardware within AD (for anti-affinity)
-•	Compartment: logical container for resources and policies
-•	Tenancy: your entire OCI account (root compartment)
-•	OCID: unique identifier for each resource
-•	Dynamic group: group of instances (compute) that can act as principals
+Cheat Sheet for Solutions Architects – OCI 1Z0-1072-25<br />
+IAM / Access<br />
+•	Tenancy = root compartment; compartments can be nested up to 6 levels. <br />
+•	Policy syntax: Allow <subject> to <verb> <resource-type> in <location> [where <conditions>].<br />
+•	Verbs: inspect, read, use, manage.<br />
+•	Principle of least privilege → grant only required permissions.<br />
+•	Resources have exactly one compartment at a time; moving a resource to new compartment means new compartment’s policies apply immediately.<br />
+•	Administrator roles (for identity domains) can simplify user access by reducing custom policy count.<br />
+•	Tag‐based access control: use where target.resource.compartment.tag.<key> = '<value>'.<br />
 
-Things you MUST study before going to the exam like a Last-Minute Study Sheet
+Networking<br />
+•	VCN: your private network in OCI. Subnets live in VCNs.<br />
+•	Gateways:<br />
+  Internet Gateway for internet traffic.<br />
+  NAT Gateway for outbound internet from private subnets.<br />
+  Service Gateway for private access to OCI public services without internet.<br />
+•	Peering and DRG: VCNs in same/different regions can connect via local or remote peering using DRG.<br />
+•	Traffic Management Steering policies: Geolocation Steering = route based on user’s geographic location.<br />
+•	Security Lists apply at subnet level; NSGs apply at VNIC level.<br />
+•	Use Network Visualiser for topology view; use Network Path Analyzer for connectivity issues.<br />
 
-🧩 Identity & Access Management (IAM)
-Compartment Access Control: Policies at the root don’t automatically grant access to nested compartments.
-Admin Roles: Simplify access control by reducing complex IAM policy creation.
-Resource Movement Impact: Moving a resource to another compartment removes prior access unless new policies cover it.
+Compute<br />
+•	Choose shape based on workload (standard, denseIO, GPU, flexible).<br />
+•	Capacity types: on‐demand, preemptible (interruptible), dedicated host (single-tenant, for node licensing).<br />
+•	Instance pools + instance configurations: reuse template to scale.<br />
+•	Shielded instances provide enhanced firmware/boot security.<br />
+•	Use OS Management Hub for patching and update management across instances.<br />
+
+Storage<br />
+•	Block Volume: persistent block storage, can expand, backup, clone. Cannot attach across availability domains.<br />
+•	Object Storage:<br />
+  Tiers: Standard (frequent access), Infrequent Access (less frequent), Archive (lowest cost, retrieval delay).<br />
+  Retention rules prevent deletion/modification until duration expires.<br />
+  Pre-authenticated requests allow sharing objects securely.<br />
+•	File Storage: NFS‐style file system, mount targets. MeteredBytes = data + snapshots + overhead.<br />
+•	Use service gateways to allow compute in private subnet to access Object Storage without internet exposure.<br />
+
+Architecting Best Practices<br />
+•	Multi-region or multi-AD deployment for high availability & fault tolerance.<br />
+•	Use compartments to isolate projects, teams, environments (Dev, Test, Prod).<br />
+•	Set quotas and tag defaults at compartments for governance.<br />
+•	Secure by design: least privilege, encryption in transit and at rest, use vaults for keys.<br />
+•	Automate with Terraform/Resource Manager; enable monitoring/alerts; consider cost optimization (e.g., smaller shapes, preemptible, proper tiering).<br />
+•	For connectivity: use redundant circuits, diverse on-prem terminations, backup VPN/FC.<br />
+
+Terminology Quick Reference<br />
+•	Region: geographic area (e.g., us-ashburn-1)<br />
+•	Availability Domain (AD): isolated data-center within region<br />
+•	Fault Domain (FD): group of hardware within AD (for anti-affinity)<br />
+•	Compartment: logical container for resources and policies<br />
+•	Tenancy: your entire OCI account (root compartment)<br />
+•	OCID: unique identifier for each resource<br />
+•	Dynamic group: group of instances (compute) that can act as principals<br />
+
+Things you MUST study before going to the exam like a Last-Minute Study Sheet<br />
+
+🧩 Identity & Access Management (IAM)<br />
+Compartment Access Control: Policies at the root don’t automatically grant access to nested compartments.<br />
+Admin Roles: Simplify access control by reducing complex IAM policy creation.<br />
+Resource Movement Impact: Moving a resource to another compartment removes prior access unless new policies cover it.<br />
 Least Privilege Principle: Always grant only the minimum permissions necessary.
 NetworkAdmins Policy: Use full compartment path (A:B:C) when defining tenancy-level policies.
 Invalid Policy Syntax: You can’t assign tenancy-wide visibility to “any-user.”
