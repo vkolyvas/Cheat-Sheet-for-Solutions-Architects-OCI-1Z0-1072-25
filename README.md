@@ -100,47 +100,47 @@ ________________________________________
 Dedicated Hosts: Use for isolated hardware and node-based licensing compliance.<br />
 Shielded Instances: Protect from firmware and rootkit attacks with secure boot.<br />
 Instance Configurations: Delete only if not part of a pool; reusable across pools.<br />
-Performance Autotune: Detached block volumes auto-adjust to lowest cost tier.
-Burstable Instances: Cheaper compute for low-usage workloads with burst credits.
-Preemptible Instances: Ideal for short-term, cost-sensitive workloads.
-Maintenance Events: OCI automatically reboots instances if not manually migrated.
+Performance Autotune: Detached block volumes auto-adjust to lowest cost tier.<br />
+Burstable Instances: Cheaper compute for low-usage workloads with burst credits.<br />
+Preemptible Instances: Ideal for short-term, cost-sensitive workloads.<br />
+Maintenance Events: OCI automatically reboots instances if not manually migrated.<br />
 ________________________________________
-🗄️ Storage
-Backup Tier: Infrequent Access tier minimizes cost with instant retrieval.
-File System Replication: Replicate within or across OCI regions for resilience.
-File System Snapshot: Only counts changed data once in metered size.
-Retention Rules: Duration applies from last modification date of each object.
-Restore from Backup: Can restore to a larger block volume size.
-File Overwrite Metering: Overwriting data increases total metered storage.
-File Storage Encryption: Oracle keys by default; customer Vault keys optional.
-Pre-Authenticated Requests: Can’t edit PARs; delete to revoke access.
-Replica Activation: Must promote replica before using as a new volume.
-Multipart Uploads: Upload in 50 GiB parts, up to 10,000 parts total.
-Object Replication: Cross-region replication ensures durability.
-File Access Blocked: Fix by updating VCN or NSG rules blocking mount target.
-Block Volume Attachment: Volumes stay within their availability domain.
-Snapshot Storage: Snapshots only count changed data once.
+🗄️ Storage<br />
+Backup Tier: Infrequent Access tier minimizes cost with instant retrieval.<br />
+File System Replication: Replicate within or across OCI regions for resilience.<br />
+File System Snapshot: Only counts changed data once in metered size.<br />
+Retention Rules: Duration applies from last modification date of each object.<br />
+Restore from Backup: Can restore to a larger block volume size.<br />
+File Overwrite Metering: Overwriting data increases total metered storage.<br />
+File Storage Encryption: Oracle keys by default; customer Vault keys optional.<br />
+Pre-Authenticated Requests: Can’t edit PARs; delete to revoke access.<br />
+Replica Activation: Must promote replica before using as a new volume.<br />
+Multipart Uploads: Upload in 50 GiB parts, up to 10,000 parts total.<br />
+Object Replication: Cross-region replication ensures durability.<br />
+File Access Blocked: Fix by updating VCN or NSG rules blocking mount target.<br />
+Block Volume Attachment: Volumes stay within their availability domain.<br />
+Snapshot Storage: Snapshots only count changed data once.<br />
 ________________________________________
-🔐 Security, Governance & Monitoring
-OS Patching: Use OS Management Hub to centrally patch Linux kernels.
-Confidential Computing: Encrypts and isolates in-use data to prevent host access.
-Least Privilege IAM: Limit access scope strictly to what’s required.
-Web Application Acceleration: Uses caching and compression to speed Layer-7 traffic.
-DNS Service: Manage zones and records, not IAM or WAF rules.
-Inter-Region Latency Dashboard: View latency trends for up to 30 days.
-Network Visualizer: Visualizes connections between all VCNs for clarity.
-Network Capture Filters: Combine flow logs and packet captures for deep analysis.
-Outbound Data Costs: OCI egress fees are very low compared to competitors.
-Private IP Behavior: One private IP per VNIC; can assign a public IP in public subnet.
+🔐 Security, Governance & Monitoring<br />
+OS Patching: Use OS Management Hub to centrally patch Linux kernels.<br />
+Confidential Computing: Encrypts and isolates in-use data to prevent host access.<br />
+Least Privilege IAM: Limit access scope strictly to what’s required.<br />
+Web Application Acceleration: Uses caching and compression to speed Layer-7 traffic.<br />
+DNS Service: Manage zones and records, not IAM or WAF rules.<br />
+Inter-Region Latency Dashboard: View latency trends for up to 30 days.<br />
+Network Visualizer: Visualizes connections between all VCNs for clarity.<br />
+Network Capture Filters: Combine flow logs and packet captures for deep analysis.<br />
+Outbound Data Costs: OCI egress fees are very low compared to competitors.<br />
+Private IP Behavior: One private IP per VNIC; can assign a public IP in public subnet.<br />
 ________________________________________
-✅ Quick Exam Recall
-IAM: Policies are compartment-based; use dynamic groups + tags.
-Networking: Remember gateway types (IGW, SGW, NAT, DRG, LPG).
-Compute: Match instance type (burstable, preemptible, dedicated) to workload.
-Storage: Tier smartly (Standard, IA, Archive) and know replication rules.
-Security: Encryption, least privilege, and redundancy are always the right answers.
+✅ Quick Exam Recall<br />
+IAM: Policies are compartment-based; use dynamic groups + tags.<br />
+Networking: Remember gateway types (IGW, SGW, NAT, DRG, LPG).<br />
+Compute: Match instance type (burstable, preemptible, dedicated) to workload.<br />
+Storage: Tier smartly (Standard, IA, Archive) and know replication rules.<br />
+Security: Encryption, least privilege, and redundancy are always the right answers.<br />
 ________________________________________
-✅ Exam Strategy Tip
+✅ Exam Strategy Tip<br />
 Focus on how OCI enforces compartmentalization, encryption, and automation — nearly every correct answer aligns with security, cost-efficiency, or fault tolerance.
 
 
