@@ -147,4 +147,6 @@ Focus on how OCI enforces compartmentalization, encryption, and automation — n
 
 ![OCI25CAA](https://github.com/user-attachments/assets/bc0c8929-c823-4f86-b34a-09f2b936eea4)
 
+[eCertificate_1z0-1072-25_kolyvas.pdf](https://github.com/user-attachments/files/23358774/eCertificate_1z0-1072-25_kolyvas.pdf)
+
 
