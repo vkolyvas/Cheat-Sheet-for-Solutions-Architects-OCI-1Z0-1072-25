@@ -145,5 +145,6 @@ ________________________________________
 ✅ Exam Strategy Tip<br />
 Focus on how OCI enforces compartmentalization, encryption, and automation — nearly every correct answer aligns with security, cost-efficiency, or fault tolerance.
 
+![OCI25CAA](https://github.com/user-attachments/assets/bc0c8929-c823-4f86-b34a-09f2b936eea4)
 
 
