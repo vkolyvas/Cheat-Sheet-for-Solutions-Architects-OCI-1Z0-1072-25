@@ -83,7 +83,7 @@ Instance Principals: No need for tokens; instances authenticate via dynamic grou
 Auth Tokens: Use auth tokens when third-party APIs can’t use OCI’s signature method.<br />
 Policy Optimization: Eliminate redundant child-compartment policies; inherit from parent.<br />
 ________________________________________
-🌐 Networking<br />
+ Networking<br />
 DNS Steering: Geolocation steering routes users based on location.<br />
 Site-to-Site VPN: Provides redundant tunnels and supports BGP or static routing.<br />
 Invalid Block Volume Action: Block volumes can’t attach across availability domains.<br />
@@ -98,7 +98,7 @@ Network Visualizer: Displays VCN topology across tenancy for easy management.<br
 Outbound Data Costs: OCI egress pricing is far lower than competitors.<br />
 Capture Filters: Use flow log and packet capture filters for monitoring.<br />
 ________________________________________
-💻 Compute<br />
+ Compute<br />
 Dedicated Hosts: Use for isolated hardware and node-based licensing compliance.<br />
 Shielded Instances: Protect from firmware and rootkit attacks with secure boot.<br />
 Instance Configurations: Delete only if not part of a pool; reusable across pools.<br />
@@ -107,7 +107,7 @@ Burstable Instances: Cheaper compute for low-usage workloads with burst credits.
 Preemptible Instances: Ideal for short-term, cost-sensitive workloads.<br />
 Maintenance Events: OCI automatically reboots instances if not manually migrated.<br />
 ________________________________________
-🗄️ Storage<br />
+🗄 Storage<br />
 Backup Tier: Infrequent Access tier minimizes cost with instant retrieval.<br />
 File System Replication: Replicate within or across OCI regions for resilience.<br />
 File System Snapshot: Only counts changed data once in metered size.<br />
@@ -123,7 +123,7 @@ File Access Blocked: Fix by updating VCN or NSG rules blocking mount target.<br 
 Block Volume Attachment: Volumes stay within their availability domain.<br />
 Snapshot Storage: Snapshots only count changed data once.<br />
 ________________________________________
-🔐 Security, Governance & Monitoring<br />
+ Security, Governance & Monitoring<br />
 OS Patching: Use OS Management Hub to centrally patch Linux kernels.<br />
 Confidential Computing: Encrypts and isolates in-use data to prevent host access.<br />
 Least Privilege IAM: Limit access scope strictly to what’s required.<br />
@@ -135,15 +135,15 @@ Network Capture Filters: Combine flow logs and packet captures for deep analysis
 Outbound Data Costs: OCI egress fees are very low compared to competitors.<br />
 Private IP Behavior: One private IP per VNIC; can assign a public IP in public subnet.<br />
 ________________________________________
-✅ Quick Exam Recall<br />
+ Quick Exam Recall<br />
 IAM: Policies are compartment-based; use dynamic groups + tags.<br />
 Networking: Remember gateway types (IGW, SGW, NAT, DRG, LPG).<br />
 Compute: Match instance type (burstable, preemptible, dedicated) to workload.<br />
 Storage: Tier smartly (Standard, IA, Archive) and know replication rules.<br />
 Security: Encryption, least privilege, and redundancy are always the right answers.<br />
 ________________________________________
-✅ Exam Strategy Tip<br />
-Focus on how OCI enforces compartmentalization, encryption, and automation — nearly every correct answer aligns with security, cost-efficiency, or fault tolerance.
+ Exam Strategy Tip<br />
+Focus on how OCI enforces compartmentalization, encryption, and automation - nearly every correct answer aligns with security, cost-efficiency, or fault tolerance.
 
 ![OCI25CAA](https://github.com/user-attachments/assets/bc0c8929-c823-4f86-b34a-09f2b936eea4)
 
